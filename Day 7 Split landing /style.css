@@ -4,6 +4,9 @@
   --right-bg-color: rgba(43, 43, 43, 0.8);
   --left-btn-hover-color: rgba(87, 84, 236, 1);
   --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 80%;
+  --other-width: 20%;
+  --speed: 1000ms;
 }
 
 * {
@@ -66,12 +69,12 @@ h1 {
   position: absolute;
   width: 50%;
   height: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .split.left {
   left: 0;
-  background: url('https://www.muycomputer.com/wp-content/uploads/2020/06/PS5-portada-1.jpg');
+  background: url('https://depor.com/resizer/GZcKBxZ3e1OB6u3H2kXCxQb2-yk=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/273IJJDTXJERNE5Z73E7FNPTPU.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -86,7 +89,7 @@ h1 {
 
 .split.right {
   right: 0;
-  background: url('https://i.blogs.es/28d4b9/xbox-series-x/1366_2000.jpeg');
+  background: url('https://generacionxbox.com/wp-content/uploads/2020/02/Xbox-Series-X-img-940x529.jpg.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -97,4 +100,38 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.left::before,
+.split.right::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
 }
