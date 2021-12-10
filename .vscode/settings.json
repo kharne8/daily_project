@@ -1,3 +1,6 @@
 {
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.useTabs": true,
+    "editor.formatOnSave": true
 }
