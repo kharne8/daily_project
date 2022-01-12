@@ -7,6 +7,8 @@ const slideLength = slideRight.querySelectorAll('div').length;
 
 let activeSlideIndex = 0;
 
+slideLeft.style.top = `-${(slideLength - 1) * 100}vh`;
+
 upBtn.addEventListener('click', () => changeSlide('up'));
 downBtn.addEventListener('click', () => changeSlide('down'));
 
