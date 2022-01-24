@@ -50,6 +50,7 @@ generateEl.addEventListener('click', () => {
 function generatePassword(upper, lower, number, symbol, length) {
 	let generatedPassword = '';
 	const typesCount = upper + lower + number + symbol;
+
 	const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(
 		(item) => Object.values(item)[0]
 	);
