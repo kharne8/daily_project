@@ -24,6 +24,22 @@ body {
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 }
+.clear {
+	position: fixed;
+	top: 1rem;
+	right: 7.3rem;
+	background-color: #9ec862;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.clear:hover {
+	background-color: red;
+	transform: scale(0.9);
+}
 
 .note {
 	background-color: #fff;
