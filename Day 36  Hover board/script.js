@@ -1,14 +1,28 @@
 const container = document.getElementById('container');
+const palet = document.getElementById('palet');
 // var randomColor = Math.floor(Math.random()*16777215).toString(16);
 const colors = [];
 
 randomColor();
+populate();
+
 function randomColor() {
-	while (colors.length < 20) {
+	while (colors.length < 21) {
 		var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 		colors.push('#' + randomColor);
 	}
+}
+
+function populate() {
+	colors.forEach((color) => {
+		const tile = document.createElement('div');
+		tile.classList.add('tile');
+
+		tile.style.backgroundColor = color;
+
+		palet.appendChild(tile);
+	});
 }
 
 const SQUARES = 500;
@@ -29,11 +43,10 @@ function setColor(element) {
 	element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 }
 
-// function removeColor(element) {
-
-// 	element.style.background = '#1d1d1d';
-// 	element.style.boxShadow = '0 0 2px #000';
-// }
+function removeColor(element) {
+	element.style.background = '#1d1d1d';
+	element.style.boxShadow = '0 0 2px #000';
+}
 
 function getRandomColor() {
 	return colors[Math.floor(Math.random() * colors.length)];
