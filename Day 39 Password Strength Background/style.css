@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.background {
+	background-image: url('https://source.unsplash.com/random/');
+	background-repeat: no-repeat;
+	background-size: center/cover;
+	background-position: center;
+	background-color: slategray;
+	position: absolute;
+	top: -20px;
+	bottom: -20px;
+	left: -20px;
+	right: -20px;
+	z-index: -1;
+	filter: blur(20px);
+}
