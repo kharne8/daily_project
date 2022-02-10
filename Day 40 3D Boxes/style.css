@@ -57,7 +57,7 @@ body {
 }
 
 .box {
-	background-image: url('https://source.unsplash.com/random/');
+	background-image: url('https://source.unsplash.com/random/500x500');
 	background-repeat: no-repeat;
 	background-size: 500px 500px;
 	position: relative;
