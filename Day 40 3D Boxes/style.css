@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: black;
+	background-color: rgb(20, 20, 20);
 	font-family: 'Poppins', sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +17,7 @@ body {
 }
 
 .magic {
-	background-color: #f9c024;
+	background-color: #5d23fa5e;
 	color: #fff;
 	font-family: 'Poppins';
 	border: 0;
@@ -28,7 +28,7 @@ body {
 	position: fixed;
 	top: 20px;
 	letter-spacing: 1px;
-	box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+	box-shadow: 0 3px rgba(140, 52, 255, 0.5);
 	z-index: 100;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .box {
-	background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+	background-image: url('https://source.unsplash.com/random/');
 	background-repeat: no-repeat;
 	background-size: 500px 500px;
 	position: relative;
@@ -68,7 +68,8 @@ body {
 
 .box::after {
 	content: '';
-	background-color: #f6e58d;
+	background-color: #4b4b4b;
+	opacity: 0.8;
 	position: absolute;
 	top: 8px;
 	right: -15px;
@@ -79,7 +80,8 @@ body {
 
 .box::before {
 	content: '';
-	background-color: #f9c024;
+	background-color: #4b4b4b;
+	opacity: 0.8;
 	position: absolute;
 	bottom: -15px;
 	left: 8px;
