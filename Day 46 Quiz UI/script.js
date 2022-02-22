@@ -54,7 +54,6 @@ function loadQuiz() {
 	b_text.innerText = currentQuizData.answers[nando[1]];
 	c_text.innerText = currentQuizData.answers[nando[2]];
 	d_text.innerText = currentQuizData.answers[nando[3]];
-	console.log(currentQuizData);
 }
 
 function deselectAnswers() {
