@@ -8,11 +8,24 @@
 			src="https://kit.fontawesome.com/393c05aca3.js"
 			crossorigin="anonymous"
 		></script>
-		<title>Feed Gallery</title>
+		<title>To Do List</title>
 	</head>
 	<body>
-		<h1 class="title">Photo Gallery</h1>
-		<div class="container"></div>
+		<h1>To Do's</h1>
+		<form id="form">
+			<input
+				type="text"
+				class="input"
+				id="input"
+				placeholder="Enter you to do"
+				autocomplete="off"
+			/>
+			<ul class="todos" id="tods"></ul>
+		</form>
+		<small
+			>Left click to toggle completed. <br />
+			Right click to delete.
+		</small>
 
 		<script src="script.js"></script>
 	</body>
