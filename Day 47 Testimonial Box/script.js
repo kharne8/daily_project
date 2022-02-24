@@ -21,7 +21,6 @@ async function fetchData() {
 
 		testimonials.push(mold);
 	});
-	console.log(testimonials[0]);
 }
 
 let idx = 1;
@@ -41,4 +40,4 @@ function nextTestimonial() {
 	}
 }
 
-setInterval(() => nextTestimonial(), 5000);
+setInterval(() => nextTestimonial(), 10000);
