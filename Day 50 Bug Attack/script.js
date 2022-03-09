@@ -5,6 +5,9 @@ const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
 const messageEl = document.getElementById('message');
 const gameContainer = document.getElementById('game-container');
+const gameOver = new Audio('./assets/gameover.mp3');
+
+const play = () => gameOver.play();
 
 let seconds = 0;
 let score = 0;
@@ -23,6 +26,19 @@ chooseBtn.forEach((btn) => {
 		startGame();
 	});
 });
+
+function startGame() {
+	setInterval(increaseTime, 1000);
+}
+
+function increaseTime() {
+	let m = Math.floor(seconds / 60);
+	let s = seconds % 60;
+	m = m < 10 ? `0${m}` : m;
+	s = s < 10 ? `0${s}` : s;
+	timeEl.innerHTML = `Time: ${m}:${s}`;
+	seconds++;
+}
 
 function createInsect() {
 	const insect = document.createElement('div');
@@ -48,5 +64,13 @@ function getRandomLocation() {
 }
 
 function catchInsect() {
-	console.log('shit');
+	if (score > 10) {
+		play();
+	}
+	score++;
+	scoreEl.innerHTML = `Score: ${score}`;
+	this.classList.add('caught');
+	setTimeout(() => this.remove(), 2000);
+	setTimeout(createInsect, 1000);
+	setTimeout(createInsect, 1500);
 }
